@@ -14,6 +14,12 @@ namespace WinFormsMVPTemplate
         [STAThread]
         static void Main()
         {
+            // Add Services to our ServiceLocator class
+            // 
+            // Usage: Global.Services.GetService...
+            IoC.Bootstraper.AddServices();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
